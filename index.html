@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#184c6e">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>DifferentBaseConvertor</title>
+</head>
+<body>
+    <section>
+        <input id="SpeedValue" type="number" onclick="ChangeSpeed()" onkeydown="ChangeSpeed()" value="100" min="1" max="100">
+        <div id="PlayPause">
+            <img src="play.png" id="play" class="PlayPause">
+            <img src="pause.png" id="pause" class="PlayPause">
+            <img src="editplay.png" id="editplay" class="EditPlayPause">
+        </div>
+        <img src="pencil.png" id="edit">
+        <img src="slash.png" id="editSlash" style="-webkit-transform: scaleX(-1);transform: scaleX(-1.5);visibility: hidden;">
+        <div class="display">
+            <input id="User" type="Number" placeholder="G I V E  -  B A S E" onkeyup="ChangeEdit()">
+            <div id="PowerN">
+                <div id="00" class="Power">
+                    P O W E R*
+                </div>
+            </div>
+
+            <div id="BaseN">
+                <div id="0" class="Board" style="font-size: 80%; color: rgb(207, 207, 207);">
+                    N U M B E R - B A S E*
+                </div>
+            </div>
+            <div id = "Base10" style="font-size: 80%; color: rgb(255, 255, 255); outline: none;" contenteditable="false">
+                N U M B E R*
+            </div>
+        </div>
+    </section>
+
+    <section id="Intro">
+        <div id="Explanation">
+            <p style="width: 100%;">If you're not familiar or you're new to numbers with with diffrent bases. Just watch this video.</p><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cZH0YnFpjwU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+            <p style="width: 100%; font-weight: 900;">This app will help you to convert numbers into different base</p>
+
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S K I P</div>
+        <div id="forward">
+            N E X T
+        </div>
+    </section>
+
+    <section id="inputbase" class="Parts" style="visibility: hidden;">
+        <div class="display">
+            <input id="User" type="Number" placeholder="G I V E  -  B A S E" onkeyup="ChangeEdit()">
+            <p style="font-size: 120%;">
+                In this you can give input for any Base from 2 to &#8734, and run a loop or manually convert number to the given base.
+            </p>
+        </div>
+        <div id="backward">
+            B A C K 
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S K I P</div>
+        <div id="forward">
+            N E X T
+        </div>
+    </section>
+
+    <section id="inputnumber" class="Parts" style="visibility: hidden; margin-top: auto;">
+        <div class="display">
+            <p>* You cannot edit this type of things</p>
+            <div id = "Base10" style="font-size: 80%; color: rgb(0, 0, 0); background-image: linear-gradient(to right,#ff9f0f, white); transition: none;" contenteditable="false">
+                N U M B E R* &emsp; / &emsp; G I V E - N U M B E R
+            </div>
+            <p style="font-size: 90%; @media screen and (max-width: 1000px){font-size: 120%;}">
+                <u>Automatic Looping Page</u>: Here the Decimal numbers will be shown<br><br>
+                <u>Self Convertor Page</u>: Here you can enter any number from 0 to &#8734. In order to convert into different base
+            </p>
+        </div>
+
+        <div id="backward">
+            B A C K
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S K I P</div>
+        <div id="forward">
+            N E X T
+        </div>
+    </section>
+
+    <section id="Speed"class="Parts" style="visibility: hidden;">
+        <input id="SpeedValue" type="number" onclick="ChangeSpeed()" onkeydown="ChangeSpeed()" value="100" min="1" max="100" style="position:absolute;transition: none;">
+        <p style="position: absolute;justify-self: center;align-self: center;text-align: center;font-size: 120%;color: rgb(82, 82, 82);width: 80%;">
+            In this you can increase or decrease the speed of the Automatic Looping Base counter from 1 to 100
+        </p>
+        <div id="backward">
+            B A C K
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S K I P</div>
+        <div id="forward">
+            N E X T
+        </div>
+    </section>
+
+    <section id="Convertor" class="Parts" style="visibility: hidden;">
+        <img src="pencil.png" id="edit1" style="filter: invert(0);">
+        <p style="position: absolute; font-size: 120%;">
+            By clicking this icon you can convert Automatic Looping Page to Self Convertor Page or inverse.
+        </p>
+        <div id="backward">
+            B A C K
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S K I P</div>
+        <div id="forward">
+            N E X T
+        </div>
+    </section> 
+
+    <section id="PlayStop" class="Parts" style="visibility: hidden;"> 
+        <div id="PlayPause">
+            <img src="play.png" id="play1" class="PlayPause" style="filter: invert(0%); visibility: hidden;" >
+            <img src="pause.png" id="pause1" class="PlayPause" style="position:absolute; filter: invert(0%); visibility: hidden; margin-right: 90%;">
+        </div>
+        <p style="position: absolute; font-size: 120%;">
+            <u>Automatic Looping Page</u>: Play / Pause <br><br> <u>Self Convertor Page</u>: You can use play button as convertor or incrementor, which can increse the number by 1.
+        </p>
+        <div id="backward">
+            B A C K
+        </div>
+        <div id="Skip" style="position:absolute; align-self: flex-end; margin-bottom: 10.5%;">S T A R T</div>
+    </section>
+
+</body>
+</html>
